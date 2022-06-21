@@ -21,11 +21,29 @@ const respostas = [
     "Sinais apontam que sim.",
 ]
 const fazerPergunta = document.querySelector('form button')
-const resposta =  document.querySelector('#resposta')
+const respostaElement =  document.querySelector('#resposta')
+const inputPergunta = document.querySelector('form input')
 
 fazerPergunta.addEventListener('click', (e)=>{
     e.preventDefault()
-    const totalRespostas = resposta.length
+    if(inputPergunta.value == ""){
+        alert('favor, colocar uma pergunta!')
+        return
+    }
+
+    const pergunta = `<h2> ${inputPergunta.value} </h2>`
+
+
+    const totalRespostas = respostas.length
     const ramdomNumber = Math.floor(Math.random()*totalRespostas)
+    respostaElement.innerHTML = pergunta + `<p> ${respostas[ramdomNumber]} </p>` 
+
+    //sumir respsota depois de 5s
+    setTimeout(
+        function(){
+            respostaElement.style.opacity = 0;
+        },
+        5000
+    )
 
 })
