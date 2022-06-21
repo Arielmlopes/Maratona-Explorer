@@ -49,7 +49,7 @@ main{
     max-height: 100vh;
     margin: 0 auto;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 main img{
@@ -90,4 +90,17 @@ button{
 }
 button:hover{
     background-color: #5f1d9d;
+}
+#resposta{
+    color: #fff;
+    margin-top: 30px;
+}
+#resposta h2{
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+#resposta p{
+    font-size: 24px;
 }
